@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Agency</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Google Fonts - Montserrat & Oswald -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap" async defer></script>
+</head>
+<body>
+    <div class="header-and-search-bar-background">
+        <header class="main-header">
+            <div class="logo">
+                VISTA
+            </div>        
+            <nav class="main-nav">
+                <li><a class="header-button" href="#">Post Listing</a></li>
+                <li><a class="header-button" href="#">Buy</a></li>
+                <li><a class="header-button" href="#">Log In</a></li>
+            </nav>
+        </header>
+        <h1>Find your dream home</h1>
+        <div class="search-bar-container">
+            <form class="search-bar" action="/search" method="GET">
+                <input type="text" name="q" placeholder="search anything"></input>;
+                <button type="submit"><img src="img/search.png"></img></button>
+            </form>
+        </div>
+    </div>
+    <div class="info-searches">
+        <div class="recent-listings">
+            <h2>Recent Listings</h2>
+            <img src="img/recent-listings.jpg" alt="Recent Listings Image">
+        </div>
+        <div class="recent-searches">
+            <h2>Recent Searches</h2>
+            <img src="img/recent-searches.jpg" alt="Recent Searches Image">
+        </div>
+        <div class="map">
+            <h2>Location</h2>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <article>
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget urna nec nulla mattis feugiat.</p>
+        </article>
+        <div class="image-about-us">
+            <img src="img/about-us.jpg" alt="About Us Image">
+        </div>   
+    </div>
+</body>
+<footer class="main-footer">
+    <nav class="footer-nav">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Application (Google Play link)</a>
+    </nav>
+    <nav class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </nav>
+</footer>
+</html>
