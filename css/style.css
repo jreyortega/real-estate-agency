@@ -166,8 +166,13 @@ img {
     background-image:url("../img/recent-listings-img.jpg");
     border: 1rem solid black;
     position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
-
+    transition:border 1s ease;
 }
+
+.recent-listings:hover{
+    border: 1rem solid white;
+}
+
 
 .recent-listings::before {
     content:'';
