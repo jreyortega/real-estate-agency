@@ -1,5 +1,5 @@
 :root {
-    --mycolorblue: #6eddff;
+    --mycolorblue: #fafafa;
     --mycolordarkblue: rgba(10, 51, 48, 0.7);
     --mycolorlightgrey: #919191;
     --fontMontserrat: "Montserrat", sans-serif;
@@ -141,4 +141,159 @@ img {
 
 .search-bar button img{
     width: 2.5rem;
+}
+
+.info-searches{
+    display:flex;
+    padding:2rem;
+    width: 100%;
+    height: 60rem;
+}
+
+.info-searches div{
+    flex:1;
+    margin-right: 3rem;
+}
+
+.info-searches h2{
+    font-family: var(--fontMontserrat);
+    color:white;
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+.recent-listings{
+    background-image:url("../img/recent-listings-img.jpg");
+    border: 1rem solid black;
+    position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
+
+}
+
+.recent-listings::before {
+    content:'';
+    position:absolute;
+    top:-1rem;
+    left:1rem;
+    width:0;
+    height:0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.recent-listings::after {
+    content:'';
+    position:absolute;
+    top:1rem;
+    left:-1rem;
+    width:0;/* Ajustar el ancho para que se extienda 0.5rem más allá de cada lado */
+    height:0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.recent-listings:hover::before{
+    animation: animate 0.5s linear forwards;
+}
+@keyframes animate {
+
+    0%
+    {
+        width: 0;
+        height:0;
+        border-top-color: var(--mycolorblue);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50%
+    {
+        width: 100%;
+        height:0;
+        border-top-color: var(--mycolorblue);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100%
+    {
+        width: 100%;
+        height:100%;
+        border-top-color: var(--mycolorblue);
+        border-right-color:  var(--mycolorblue);
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    
+}
+
+.recent-listings:hover::after{
+    animation: animate2 0.5s linear forwards;
+}
+@keyframes animate2 {
+
+    0%
+    {
+        width: 0;
+        height:0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: var(--mycolorblue);
+    }
+    50%
+    {
+        width: 0;
+        height:100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: var(--mycolorblue);
+        border-left-color: var(--mycolorblue);
+    }
+    100%
+    {
+        width: 100%;
+        height:100%;
+        border-top-color: transparent;
+        border-right-color:  transparent;
+        border-bottom-color: var(--mycolorblue);
+        border-left-color: var(--mycolorblue);
+    }
+    
+}
+
+.recent-searches{
+    background-image:url("../img/recent-searches-img.jpg");
+    border: 1rem solid black;
+    position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
+
+}
+
+.recent-searches::before {
+    content:'';
+    position:absolute;
+    top:-1rem;
+    left:1rem;
+    width:0;
+    height:0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.recent-searches::after {
+    content:'';
+    position:absolute;
+    top:1rem;
+    left:-1rem;
+    width:0;/* Ajustar el ancho para que se extienda 0.5rem más allá de cada lado */
+    height:0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.recent-searches:hover::before{
+    animation: animate 0.5s linear forwards;
+}
+
+.recent-searches:hover::after{
+    animation: animate2 0.5s linear forwards;
 }
