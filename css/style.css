@@ -180,13 +180,42 @@ img {
     color:white;
     font-size: 3rem;
     margin-left: 2rem;
+    z-index:1;
 }
 
+.info-searches button{
+
+    border:1rem solid white;
+    background-color: transparent;
+    color:white;
+    font-size: 4rem;
+    font-family: var(--fontMontserrat);
+    transition:  background-color  ease, border  ease;
+}
+
+.info-searches button:hover{
+
+    background-color:black;
+    border:1rem solid transparent;
+
+}
 .recent-listings{
-    background-image:url("../img/recent-listings-img.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/recent-listings-img.jpg");
     border: 1rem solid black;
     position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
-    transition:border 0.5s ease; 
+    transition:border 0.5s ease;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+
+.recent-listings button{
+
+    width: 90%;
+    height:20%;
+    position:absolute;
+    bottom: 10%;
+    
+
 }
 
 /* .recent-listings:hover{
@@ -287,9 +316,17 @@ img {
 }
 
 .recent-searches{
-    background-image:url("../img/recent-searches-img.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/recent-searches-img.jpg");
     border: 1rem solid black;
     position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
+    padding:2rem 2rem 2rem 2rem;
+}
+
+.recent-searches button{
+    width: 90%;
+    height:20%;
+    position:absolute;
+    bottom: 10%;
 
 }
 
@@ -342,7 +379,7 @@ img {
     margin-top:2rem;
     margin-left:2rem;
     margin-bottom: 2rem;
-    width:140rem;
+    width:150rem;
     border-left:1rem solid black;
     border-top:1rem solid black;
     border-bottom:1rem solid black;
@@ -382,4 +419,12 @@ img {
     border-right:1rem solid black;
     border-top:1rem solid black;
     border-bottom:1rem solid black;
+}
+
+.main-footer{
+
+    background-image: linear-gradient(var(--mycolordarkblue), var(--mycolordarkblue)), url("../img/header-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height:40rem;
 }
