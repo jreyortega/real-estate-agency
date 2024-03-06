@@ -1,7 +1,8 @@
 :root {
-    --mycolorblue: #fafafa;
+    --mycolorblue: #43d8d8a1;
     --mycolordarkblue: rgba(10, 51, 48, 0.7);
     --mycolorlightgrey: #919191;
+    --mycolorborder: #003133;
     --fontMontserrat: "Montserrat", sans-serif;
 }
 
@@ -45,7 +46,6 @@ img {
     display: flex;
     align-items: center;
     margin-bottom: 0;
-    padding: 0 2%; /* Separation between header links and right side */
     list-style-type: none;
     justify-content: flex-end;
 }
@@ -67,8 +67,7 @@ img {
 }
 
 .header-button:hover {
-    box-shadow: 0 0 0 0.3rem var(--mycolorblue),
-    0 0 0 0.8rem var(--mycolorblue);
+    box-shadow: 0 0 0 0.5rem var(--mycolorblue);
 }
 
 .logo {
@@ -76,6 +75,7 @@ img {
     font-size: 3.5rem;
     color: white;
     text-transform: uppercase;
+    padding-left: 2rem;
 }
 
 /* Search bar header */
@@ -143,31 +143,12 @@ img {
     width: 2.5rem;
 }
 
+/* Main content */
 .info-searches, .about-us{
-    /* background-image:url("../img/info-searches-img.jpg"); */
-    /*background-clip: content-box;  Fondo se extiende solo hasta el borde exterior del contenido */
-    /* border-top:1rem solid black; */
-    /* border-bottom: 1rem solid black; */
     display:flex;
     padding:1rem 0rem 1rem 0rem;
     width: 100%;
     height: 60rem;
-}
-
-.divisor-main-1{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.divisor-main-1 img{
-    width: 80rem;
-}
-
-.about-us{
-    /* background-image:url("../img/info-searches-img.jpg"); */
-    padding-top:0rem;
 }
 
 .info-searches div{
@@ -184,44 +165,36 @@ img {
 }
 
 .info-searches button{
-
     border:1rem solid white;
     background-color: transparent;
     color:white;
     font-size: 4rem;
     font-family: var(--fontMontserrat);
-    transition:  background-color  ease, border  ease;
+    transition:  background-color ease, border ease;
+    cursor: pointer;
 }
 
 .info-searches button:hover{
-
-    background-color:black;
+    background-color:var(--mycolorborder);
     border:1rem solid transparent;
-
 }
+
+/* Recent listings */
 .recent-listings{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/recent-listings-img.jpg");
-    border: 1rem solid black;
-    position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/recent-listings-img.jpg");
+    border: 1rem solid var(--mycolorborder);
+    position:relative; /* Para que el psudoelemento before se ajuste al contenedor "padre" */
     transition:border 0.5s ease;
     padding: 2rem 2rem 2rem 2rem;
 }
 
-
 .recent-listings button{
-
     width: 90%;
     height:20%;
     position:absolute;
     bottom: 10%;
-    
-
+    cursor: pointer;
 }
-
-/* .recent-listings:hover{
-    border: 1.0rem solid transparent;
-} */
-
 
 .recent-listings::before {
     content:'';
@@ -254,7 +227,7 @@ img {
     {
         width: 0%;
         height:0%;
-        border-top-color: var(--mycolorblue);
+        border-top-color: white;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
@@ -263,7 +236,7 @@ img {
     {
         width: 100%;
         height:0;
-        border-top-color: var(--mycolorblue);
+        border-top-color: white;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
@@ -272,8 +245,8 @@ img {
     {
         width: 100%;
         height:100%;
-        border-top-color: var(--mycolorblue);
-        border-right-color:  var(--mycolorblue);
+        border-top-color: white;
+        border-right-color:  white;
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
@@ -292,7 +265,7 @@ img {
         border-top-color: transparent;
         border-right-color: transparent;
         border-bottom-color: transparent;
-        border-left-color: var(--mycolorblue);
+        border-left-color: white;
     }
     50%
     {
@@ -300,8 +273,8 @@ img {
         height:100%;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: var(--mycolorblue);
-        border-left-color: var(--mycolorblue);
+        border-bottom-color: white;
+        border-left-color: white;
     }
     100%
     {
@@ -309,15 +282,16 @@ img {
         height:100%;
         border-top-color: transparent;
         border-right-color:  transparent;
-        border-bottom-color: var(--mycolorblue);
-        border-left-color: var(--mycolorblue);
+        border-bottom-color: white;
+        border-left-color: white;
     }
     
 }
 
+/* Recent searches */
 .recent-searches{
     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/recent-searches-img.jpg");
-    border: 1rem solid black;
+    border: 1rem solid var(--mycolorborder);
     position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
     padding:2rem 2rem 2rem 2rem;
 }
@@ -327,7 +301,7 @@ img {
     height:20%;
     position:absolute;
     bottom: 10%;
-
+    cursor: pointer;
 }
 
 .recent-searches::before {
@@ -360,71 +334,173 @@ img {
     animation: animate2 0.25s linear forwards;
 }
 
+/* Featured listings */
+.featured-listings{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/recent-searches-img.jpg");
+    border: 1rem solid var(--mycolorborder);
+    position:relative; /*para que el psudoelemento before se ajuste al contenedor "padre"*/
+    padding:2rem 2rem 2rem 2rem;
+}
 
-
- .about-us{
-    background-clip: content-box; /* Fondo se extiende solo hasta el borde exterior del contenido */
-    display:flex;
-    padding-top:1rem;
-    padding-bottom:1rem;
-    width: 100%;
-    height: 60rem;
-} 
-
-.about-us article{
-
-    background-image: url("../img/about-us-background.jpg");
-    background-size: cover; /* La imagen se ajusta para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
-    margin-top:2rem;
-    margin-left:2rem;
-    margin-bottom: 2rem;
-    width:150rem;
-    border-left:1rem solid black;
-    border-top:1rem solid black;
-    border-bottom:1rem solid black;
-
+.featured-listings button{
+    width: 90%;
+    height:20%;
+    position:absolute;
+    bottom: 10%;
 
 }
 
-.image-about-us {
-
-    margin-top: 2rem;
-    margin-right:2rem;
-    margin-bottom:2rem;
-    width: 70rem;
-    
+.featured-listings::before {
+    content:'';
+    position:absolute;
+    top:-1rem;
+    left:1rem;
+    width:0;
+    height:0;
+    background: transparent;
+    border: 1.01rem solid transparent;
 }
 
-.about-us h2{
-
-    font-size: 3rem;
-    margin: 2rem;
-    color:white;
-    font-family: var(--fontMontserrat);
+.featured-listings::after {
+    content:'';
+    position:absolute;
+    top:1rem;
+    left:-1rem;
+    width:0;/* Ajustar el ancho para que se extienda 0.5rem más allá de cada lado */
+    height:0;
+    background: transparent;
+    border: 1.01rem solid transparent;
 }
 
-.about-us p{
-
-    font-size: 3rem;
-    margin: 2rem;
-    color:white;
-    font-family: var(--fontMontserrat);
+.featured-listings:hover::before{
+    animation: animate 0.25s linear forwards;
 }
 
-.image-about-us img{
-
-    width: 100%;
-    height:100%;
-    border-right:1rem solid black;
-    border-top:1rem solid black;
-    border-bottom:1rem solid black;
+.featured-listings:hover::after{
+    animation: animate2 0.25s linear forwards;
 }
 
-.main-footer{
+/* About us */
+/* Recent searches */
+.recent-searches {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/recent-searches-img.jpg");
+    border: 1rem solid var(--mycolorborder);
+    position: relative;
+    padding: 2rem 2rem 2rem 2rem;
+}
 
+.recent-searches button {
+    width: 90%;
+    height: 20%;
+    position: absolute;
+    bottom: 10%;
+}
+
+.recent-searches::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.recent-searches::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: -1rem;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.recent-searches:hover::before {
+    animation: animate 0.25s linear forwards;
+}
+
+.recent-searches:hover::after {
+    animation: animate2 0.25s linear forwards;
+}
+
+/* Featured listings */
+.featured-listings {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/recent-searches-img.jpg");
+    border: 1rem solid var(--mycolorborder);
+    position: relative;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.featured-listings button {
+    width: 90%;
+    height: 20%;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+}
+
+.featured-listings::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.featured-listings::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: -1rem;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 1.01rem solid transparent;
+}
+
+.featured-listings:hover::before {
+    animation: animate 0.25s linear forwards;
+}
+
+.featured-listings:hover::after {
+    animation: animate2 0.25s linear forwards;
+}
+
+/* About us */
+.about-us {
+    color: black;
+    padding-bottom: 15rem;
+}
+  
+.about-us article {
+    max-width: 150rem;
+    margin: 0 auto;
+}
+  
+.about-us h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #006159;
+}
+  
+.about-us p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.main-footer {
     background-image: linear-gradient(var(--mycolordarkblue), var(--mycolordarkblue)), url("../img/header-background.jpg");
     background-size: cover;
     background-position: center;
-    height:40rem;
+    height: 40rem;
 }
