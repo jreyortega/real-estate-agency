@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Agency</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Google Fonts - Montserrat & Oswald -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap" async defer></script>
+</head>
+<body class="search-body">
+    <div class="header-and-search-bar-background">
+        <header class="main-header">
+            <div class="logo">
+                VISTA
+            </div>        
+            <nav class="main-nav">
+                <li><a class="header-button" href="#">Post Listing</a></li>
+                <li><a class="header-button" href="#">Buy</a></li>
+                <li><a class="header-button" href="#">Log In</a></li>
+            </nav>
+        </header>
+        <h1>Find your dream home</h1>
+        <div class="search-bar-container">
+            <form class="search-bar" action="/search" method="GET">
+                <input type="text" name="q" placeholder="search anything"></input>
+                <button type="submit"><img src="img/search.png"></img></button>
+            </form>
+        </div>
+    </div>
+    <div class="search-mid-body">
+        <div class="search-filters">
+            <form class="search-filters-form">
+                <div class="form-price">
+                    <label>Price:</label>
+                            <input type="numbers" placeholder="max" required>
+                            <input type="numbers" placeholder="min" required>
+                    </div>
+                    <div class="form-beds">
+                        <label>Beds:</label>
+                            <input type="number" placeholder="num">
+                    </div>
+                    <div class="form-baths">
+                        <label>Baths:</label>
+                            <input type="number" placeholder="num">
+                    </div>
+                    <div class="form-property-type">
+                        <label>Property Type:</label>
+                        <div class="house-type">
+                                <input class="checkbox-house" type="checkbox">House
+                        </div>
+                        <div class="flat-type">
+                                <input class="checkbox-house" type="checkbox">Flat
+                        </div>
+                        <div class="townhouse-type">
+
+                                <input class="checkbox-house" type="checkbox">Townhouse
+                        </div>
+                        <div class="land-type">
+                                <input class="checkbox-house" type="checkbox">Land
+                        </div>
+                        <div class="form-property-facts">
+                            <p>Property Facts:</p>
+                            <div class="square-feet">
+                                <label>Sqr Feet</label>
+                                    <input type="numbers" placeholder="max" required>
+                                    <input type="numbers" placeholder="min" required>
+                            </div>
+                            <div class="lot-size">
+                                <label>Lot size</label>
+                                    <input type="numbers" placeholder="max" required>
+                                    <input type="numbers" placeholder="min" required>
+                            </div>
+                            <div class="year-built">
+                                <label>year built</label>
+                                    <input type="numbers" placeholder="max" required>
+                                    <input type="numbers" placeholder="min" required>
+                            </div>     
+                        </div>
+                    </div>
+                </form>
+            </form>
+        </div>
+        <div class="search-map">
+
+        </div>
+    </div>
+    <div class="search-property-list">
+
+    </div>
+    <footer class="main-footer">
+        <section class="main-footer-contact-section">
+            <h1>Contact and Navigation</h1>
+            <ul>
+                <li><a>Contact Information</a></li>
+                <li><a>Navigation Links</a></li>
+                <li><a>Social networks</a></li>
+                <li><a>Business Hours</a></li>
+                <li><a>Links to useful resources</a></li>
+                <li><a>Customer Testimonials</a></li>
+                <li><a>FAQ</a></li>
+                <li><a>Blog or educational resources</a></li>
+            </ul>
+        </section>
+        <section class="main-footer-legal-section">
+            <h1>Legal Information</h1>
+            <ul>
+                <li><a>Detailed Privacy Policy</a></li>
+                <li><a>Cookie Policy</a></li>
+                <li><a>Website Terms of Use</a></li>
+                <li><a>Legal Notices and Disclaimers</a></li>
+                <li><a>Copyright and Content Attribution</a></li>
+                <li><a>Regulatory Compliance Information</a></li>
+            </ul>
+        </section>
+        <section class="main-footer-mobile-section">
+            <h1>Download our app</h1>
+            <ul>
+                <li><img src="img/playstore.png"></img></li>
+                <li><img src="img/appstore.png"></img></li>
+            </ul>
+        </section>
+        <nav class="social-links">
+        </nav>
+    </footer>
+</body>

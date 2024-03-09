@@ -346,8 +346,10 @@ img {
 
 .main-footer section{
     font-size: 2rem;
+    flex:1;
     font-family: var(--fontMontserrat);
     color:white;
+    align-content: center;
 }
 
 .main-footer h1{
@@ -386,4 +388,84 @@ img {
     .main-footer li{
         font-size: 1.75rem;
     }
+}
+/* --------------------------SEARCH.HTML----------------------------------- */
+/* search filters form */
+.search-mid-body{
+    display:flex;
+}
+.search-filters{
+    display:flex;
+    flex-direction:column;
+    background-color: black;
+    border:0.5rem solid var(--mycolorlightgrey);
+    width: 50rem;
+    height: 70rem;
+    margin: 2rem 1rem 1rem 2rem;
+}
+
+
+.search-filters div{
+    color:white;
+    font-family: var(--fontMontserrat);
+    font-size:1.5rem;
+}
+
+.search-filters-form{
+    margin: 2rem 1rem 1rem 2rem;
+
+}
+
+.search-filters-form label{
+    margin: 2rem 1rem 1rem 1rem;
+    font-size: 2rem;
+}
+
+.search-filters-form input{
+    width: 12rem;
+    height: 2.5rem;
+    margin: 1rem 1rem 1rem 0rem;
+    border:0.25rem solid white;
+    transition:border-color 0.3s;
+}
+
+.search-filters-form input:focus{
+    border-color:aqua;
+}
+
+.form-property-type{
+    margin-top:1rem;
+
+}
+.form-property-type input{
+    width: 2rem;
+    margin-left: 3rem;
+}
+
+.form-property-facts p{
+    font-size:2rem;
+}
+
+.form-property-facts label{
+    font-size:1.5rem;
+}
+
+.form-property-facts input{
+    width: 11rem;
+    margin-left: 0rem;
+}
+
+/* search-map */
+.search-map{
+    background-color: black;
+    width: 90%;
+    margin: 2rem 2rem 1rem 1rem;
+}
+
+/* search-property-list */
+.search-property-list{
+    background-color: black;
+    bottom: 0;
+    height: 80rem;
+    margin: 2rem 2rem 2rem 2rem;
 }
