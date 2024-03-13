@@ -78,6 +78,11 @@ img {
     padding-left: 2rem;
 }
 
+.logo img{
+    width: 10rem;
+    height:10rem;
+}
+
 /* Search bar header */
 .header-and-search-bar-background h1{
     font-family: var(--fontMontserrat);
@@ -336,13 +341,14 @@ img {
 
 /* Footer */
 .main-footer {
+    display:flex;
     background-color:#006159;
     justify-content:space-between;
     height: 50rem;
     margin-top: 10rem;
     padding:5rem 15rem 5rem 15rem;
-    display: flex;
 }
+
 
 .main-footer section{
     font-size: 2rem;
@@ -353,17 +359,29 @@ img {
 }
 
 .main-footer h1{
+    font-size: 2rem;
+    font-family: var(--fontMontserrat);
+    color:white;
     margin-right:5rem;
+    margin-bottom: 0.5rem;
     font-size: 3rem;
+    cursor: pointer;
 }
 
 .main-footer ul{
     list-style-type:none;
     margin-left:-4rem;
+    cursor: pointer;
+}
+
+.menu-button-click img{
+    opacity: 0;
+    position: absolute;
 }
 
 .main-footer li{
     margin-top: 1.5rem;
+    cursor: pointer;
 }
 
 .main-footer li:hover{
@@ -376,18 +394,49 @@ img {
 
 @media (max-width:768px) {
     .main-footer {
-        margin-top:0rem;
+        display:flex;
+        flex-direction: column;
+        padding-top:2rem;
         height: 100%;
-        padding-left:2rem;
+        padding-left:4rem;
         padding-right: 2rem;
+    }
+    .main-footer ul {
+        overflow:hidden;
+        margin-top: 1rem;
     }
     .main-footer h1 {
         font-size: 2rem;
         text-align: left;
+        cursor:pointer;
+        
     }
     .main-footer li{
         font-size: 1.75rem;
+        margin-left: 3rem;
+        transition: height 0.4s;
+        margin: 3rem 0 0 2rem;
+        height: 0;
     }
+    .menu-button-click img{
+        opacity: 100;
+        position: absolute;
+        transition: transform 0.3s;
+    }
+
+    .arrow img{
+        transform: rotate(90deg);
+    }
+
+    .main-footer-mobile-section li{
+        margin: 2rem 0 7rem 0;
+    }
+
+}
+
+.main-map{
+    width: 90%;
+    height: 60rem;
 }
 /* --------------------------SEARCH.HTML----------------------------------- */
 /* search filters form */
@@ -402,6 +451,7 @@ img {
     width: 50rem;
     height: 70rem;
     margin: 2rem 1rem 1rem 2rem;
+    overflow-y: scroll;
 }
 
 
@@ -468,4 +518,146 @@ img {
     bottom: 0;
     height: 80rem;
     margin: 2rem 2rem 2rem 2rem;
+}
+
+/* --------------------------------LOGIN.HTML----------------------------------- */
+
+html, body {
+    height: 100%; /* Asegura que el html y el body ocupen el 100% del viewport */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+  }
+
+.login-body-img{
+    width: 7rem;
+    height: 7rem;
+}
+
+.login-body{
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position:relative;
+}
+
+.login-body-img{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.login-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:60%;
+    width: 50%;
+}
+
+.login-main h1{
+    font-family: var(--fontMontserrat);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+}
+
+.login-form input{
+    width: 30rem;
+    height:4.5rem;
+    font-size: 2rem;
+    color:black;
+}
+
+.login-button{
+    display:flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.login-button button{
+    background-color: transparent;
+    border: 0.15rem solid #003133;
+    width: 30rem;
+    height: 4.5rem;
+    transition: background-color color 0.25s;
+    color:#003133;
+    font-family: var(--fontMontserrat);
+    font-size: 1.5rem;
+    transition: color 0.25s;
+}
+
+.login-button button:hover{
+    background-color:#003133;
+    color:white;
+}
+
+.login-button a:hover{
+    color:white;
+}
+
+.sign-in{
+    margin-top:1.5rem;
+    font-family: var(--fontMontserrat);
+    font-size:1.5rem;
+}
+
+.sign-in a{
+    font-family: var(--fontMontserrat);
+    font-size:1.5rem;
+    color:var(--mycolorborder);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.login-separator{
+    font-family: var(--fontMontserrat);
+    font-size: 1.5rem;
+}
+
+.login-separator img{
+    margin-top:1.5rem;
+    width: 15rem;
+    height: 1rem;
+}
+
+.link-buttons{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    margin-top:1rem;
+}
+
+.link-buttons button{
+    position: relative;
+    background-color: transparent;
+    border: 0.15rem solid #003133;
+    text-align:center;
+    font-size: 1.2rem;
+    margin-top:1rem;
+    width: 30rem;
+    height: 4.5rem;
+    font-family: var(--fontMontserrat);
+    transition: background-color 0.25s;
+}
+
+.link-buttons button:hover{
+    background-color:rgba(43, 40, 40, 0.25);
+}
+.link-buttons button img{
+    position:absolute;
+    width:2rem;
+    left: 2rem;
+    top:50%;
+    transform: translateY(-50%);
 }

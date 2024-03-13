@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap">
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap" async defer></script>
+    <!-- OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body class="main-body">
     <div class="header-and-search-bar-background">
         <header class="main-header">
             <div class="logo">
-                VISTA
+                <img src="img/logo.png">
             </div>        
             <nav class="main-nav">
                 <li><a class="header-button" href="#">Post Listing</a></li>
@@ -59,10 +60,14 @@
             </p>
         </article>
     </div>
+    <div id="main-map" class="main-map"></div>
 </body>
 <footer class="main-footer">
-    <section class="main-footer-contact-section">
-        <h1>Contact and Navigation</h1>
+    <section class="main-footer-section">
+        <h1 class="menu-button-click">
+            <a class="h1-content">Contact and Navigation</a>
+            <img src="img/right_arrow_white.svg">
+        </h1>
         <ul>
             <li><a>Contact Information</a></li>
             <li><a>Navigation Links</a></li>
@@ -74,8 +79,11 @@
             <li><a>Blog or educational resources</a></li>
         </ul>
     </section>
-    <section class="main-footer-legal-section">
-        <h1>Legal Information</h1>
+    <section class="main-footer-section">
+        <h1 class="menu-button-click">
+            <a class="h1-content">Legal Information</a>           
+            <img src="img/right_arrow_white.svg">
+        </h1>
         <ul>
             <li><a>Detailed Privacy Policy</a></li>
             <li><a>Cookie Policy</a></li>
@@ -85,8 +93,11 @@
             <li><a>Regulatory Compliance Information</a></li>
         </ul>
     </section>
-    <section class="main-footer-mobile-section">
-        <h1>Download our app</h1>
+    <section class="main-footer-section">
+        <h1 class="menu-button-click">
+            <a class="h1-content">Download our app</a> 
+            <img src="img/right_arrow_white.svg">
+        </h1>
         <ul>
             <li><img src="img/playstore.png"></img></li>
             <li><img src="img/appstore.png"></img></li>
@@ -95,4 +106,6 @@
     <nav class="social-links">
     </nav>
 </footer>
+    <!-- Main JS -->
+    <script src="javascript/main.js" charset="utf-8"></script>
 </html>
