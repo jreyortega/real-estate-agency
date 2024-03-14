@@ -397,10 +397,11 @@ img {
         display:flex;
         flex-direction: column;
         padding-top:2rem;
-        height: 100%;
+        min-height: 100%;
         padding-left:4rem;
         padding-right: 2rem;
     }
+
     .main-footer ul {
         overflow:hidden;
         margin-top: 1rem;

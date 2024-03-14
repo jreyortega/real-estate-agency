@@ -14,26 +14,7 @@
     <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap" async defer></script>
 </head>
-<body class="search-body">
-    <div class="header-and-search-bar-background">
-        <header class="main-header">
-            <div class="logo">
-                VISTA
-            </div>        
-            <nav class="main-nav">
-                <li><a class="header-button" href="#">Post Listing</a></li>
-                <li><a class="header-button" href="#">Buy</a></li>
-                <li><a class="header-button" href="#">Log In</a></li>
-            </nav>
-        </header>
-        <h1>Find your dream home</h1>
-        <div class="search-bar-container">
-            <form class="search-bar" action="/search" method="GET">
-                <input type="text" name="q" placeholder="search anything"></input>
-                <button type="submit"><img src="img/search.png"></img></button>
-            </form>
-        </div>
-    </div>
+<?php include_once 'php/templates/header.php'?>
     <div class="search-mid-body">
         <div class="search-filters">
             <form class="search-filters-form">
@@ -94,39 +75,5 @@
     <div class="search-property-list">
         <!-- COMPLETAR -->
     </div>
-    <footer class="main-footer">
-        <section class="main-footer-contact-section">
-            <h1>Contact and Navigation</h1>
-            <ul>
-                <li><a>Contact Information</a></li>
-                <li><a>Navigation Links</a></li>
-                <li><a>Social networks</a></li>
-                <li><a>Business Hours</a></li>
-                <li><a>Links to useful resources</a></li>
-                <li><a>Customer Testimonials</a></li>
-                <li><a>FAQ</a></li>
-                <li><a>Blog or educational resources</a></li>
-            </ul>
-        </section>
-        <section class="main-footer-legal-section">
-            <h1>Legal Information</h1>
-            <ul>
-                <li><a>Detailed Privacy Policy</a></li>
-                <li><a>Cookie Policy</a></li>
-                <li><a>Website Terms of Use</a></li>
-                <li><a>Legal Notices and Disclaimers</a></li>
-                <li><a>Copyright and Content Attribution</a></li>
-                <li><a>Regulatory Compliance Information</a></li>
-            </ul>
-        </section>
-        <section class="main-footer-mobile-section">
-            <h1>Download our app</h1>
-            <ul>
-                <li><img src="img/playstore.png"></img></li>
-                <li><img src="img/appstore.png"></img></li>
-            </ul>
-        </section>
-        <nav class="social-links">
-        </nav>
-    </footer>
+    <?php include_once 'php/templates/footer.php'?>
 </body>
