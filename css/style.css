@@ -662,3 +662,29 @@ html, body {
     top:50%;
     transform: translateY(-50%);
 }
+
+.main-map{
+    width: 97.5%;
+    height: 60rem;
+}
+
+/* Center the map */
+.leaflet-container {
+    margin: 0 auto;
+}
+
+/* Make marker icon bigger */
+.leaflet-marker-icon {
+    transform: scale(1.5);
+}
+
+/* Make leaflet popup bigger */
+.leaflet-popup-content {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+/* Make leaflet popup text bigger */
+.leaflet-popup-content-wrapper {
+    font-size: 1.5rem;
+}

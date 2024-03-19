@@ -42,7 +42,9 @@
             </p>
         </article>
     </div>
-    <div id="main-map" class="main-map"></div>
+    <div id="main-map" class="main-map">
+        <!-- Map -->
+    </div>
 </body>
 <?php include_once 'php/templates/footer.php'?>
     <!-- Main JS -->
