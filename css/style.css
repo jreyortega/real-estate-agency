@@ -508,14 +508,14 @@ img {
 
 /* search-map */
 .search-map{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     width: 90%;
     margin: 2rem 2rem 1rem 1rem;
 }
 
 /* search-property-list */
 .search-property-list{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     bottom: 0;
     height: 80rem;
     margin: 2rem 2rem 2rem 2rem;
@@ -674,9 +674,9 @@ html, body {
 }
 
 /* Make marker icon bigger */
-.leaflet-marker-icon {
-    transform: scale(1.5);
-}
+/* .leaflet-marker-icon {
+    color: red;
+} */
 
 /* Make leaflet popup bigger */
 .leaflet-popup-content {

@@ -16,7 +16,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body class="main-body">
-    <?php include_once 'php/templates/header.php'?>
+    <?php include_once 'includes/templates/header.php'?>
     <div class="info-searches">
         <div class="recent-listings">
             <h2>Recent listings</h2>
@@ -46,7 +46,7 @@
         <!-- Map -->
     </div>
 </body>
-<?php include_once 'php/templates/footer.php'?>
+<?php include_once 'includes/templates/footer.php'?>
     <!-- Main JS -->
     <script src="javascript/main.js" charset="utf-8"></script>
 </html>

@@ -52,7 +52,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var marker = L.marker([51.505, -0.09], {
     icon: L.icon({
         iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png', // Default marker icon URL
-        iconSize: [40, 688] // Adjust size as needed
+        iconSize: [25, 40] // Adjust size as needed
     })
 }).addTo(map);
 
