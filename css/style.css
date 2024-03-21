@@ -436,9 +436,31 @@ img {
 }
 
 .main-map{
-    width: 90%;
+    width: 97.5%;
     height: 60rem;
 }
+
+/* Center the map */
+.leaflet-container {
+    margin: 0 auto;
+}
+
+/* Make marker icon bigger */
+/* .leaflet-marker-icon {
+    color: red;
+} */
+
+/* Make leaflet popup bigger */
+.leaflet-popup-content {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+/* Make leaflet popup text bigger */
+.leaflet-popup-content-wrapper {
+    font-size: 1.5rem;
+}
+
 /* --------------------------SEARCH.HTML----------------------------------- */
 /* search filters form */
 .search-mid-body{
@@ -661,30 +683,4 @@ html, body {
     left: 2rem;
     top:50%;
     transform: translateY(-50%);
-}
-
-.main-map{
-    width: 97.5%;
-    height: 60rem;
-}
-
-/* Center the map */
-.leaflet-container {
-    margin: 0 auto;
-}
-
-/* Make marker icon bigger */
-/* .leaflet-marker-icon {
-    color: red;
-} */
-
-/* Make leaflet popup bigger */
-.leaflet-popup-content {
-    font-size: 2rem;
-    padding: 1rem;
-}
-
-/* Make leaflet popup text bigger */
-.leaflet-popup-content-wrapper {
-    font-size: 1.5rem;
 }

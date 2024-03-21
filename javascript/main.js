@@ -1,33 +1,30 @@
-let listElement =document.querySelectorAll('.menu-button-click');
+// Toggle arrow class and adjust height on click
+let listElement = document.querySelectorAll('.menu-button-click');
 
+listElement.forEach(listElement => {
+    listElement.addEventListener('click', () => {
+        listElement.classList.toggle('arrow'); // Al hacer click añade una clase arrow al objeto
 
-
-listElement.forEach(listElement =>{
-    listElement.addEventListener('click',()=>{
-        listElement.classList.toggle('arrow') //Al hacer click añade una clase arrow al objeto
-    
-        let height=0;
-        let menu =listElement.nextElementSibling;//accedo al elemento adyacente
+        let height = 0;
+        let menu = listElement.nextElementSibling; // accedo al elemento adyacente
         console.log(menu.scrollHeight);
         // console.log(section.scrollHeight);
 
-        if (menu.clientHeight=="0")
-        {
-            height=menu.scrollHeight;
+        if (menu.clientHeight == "0") {
+            height = menu.scrollHeight;
         }
-        
-        menu.style.height =height+ "px"; 
 
-    })
-
+        menu.style.height = height + "px";
+    });
 });
 
+// Adjust height of .main-footer-section on click
 var menuButtons = document.querySelectorAll('.menu-button-click');
 
 menuButtons.forEach(menuButton => {
     menuButton.addEventListener('click', () => {
         // Obtener el elemento h1 dentro del menú haciendo clic
-        //var h1Element = menuButton.querySelector('.menu-button-click');
+        // var h1Element = menuButton.querySelector('.menu-button-click');
 
         // Obtener la altura del elemento h1
         var h1Height = menuButton.clientHeight;
@@ -61,4 +58,3 @@ marker.bindPopup("<b>Vista Homes</b><br>Headquarters").openPopup();
 
 // Disable Leaflet Map Scrolling
 map.scrollWheelZoom.disable();
-

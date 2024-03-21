@@ -47,6 +47,6 @@
     </div>
 </body>
 <?php include_once 'includes/templates/footer.php'?>
-    <!-- Main JS -->
-    <script src="javascript/main.js" charset="utf-8"></script>
+<!-- Main JS -->
+<script src="javascript/main.js" charset="utf-8"></script>
 </html>
