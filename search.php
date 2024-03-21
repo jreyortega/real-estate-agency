@@ -17,21 +17,21 @@
 <?php include_once 'includes/templates/header.php'?>
     <div class="search-mid-body">
         <div class="search-filters">
-            <form class="search-filters-form" action="./php/search_form_validation.php" method="post">
+            <form class="search-filters-form" action=".search.php" method="post">
                 <div class="form-price">
                     <label>Price:</label>
-                            <input type="number" id="price-min" name="price-min" placeholder="max" >
-                            <input type="number" id="price-max" name="price-max" placeholder="min" >
+                            <input type="number" id="price-min" name="price-min" placeholder="max" value="0">
+                            <input type="number" id="price-max" name="price-max" placeholder="min" value="9999999999">
                     </div>
                     <div class="form-beds">
                         <label>Beds:</label>
-                            <input type="number" id="beds-min" name="beds-min" placeholder="max" >
-                            <input type="number" id="beds-max" name="beds-max" placeholder="min" >
+                            <input type="number" id="beds-min" name="beds-min" placeholder="min" value="0">
+                            <input type="number" id="beds-max" name="beds-max" placeholder="max" value="9999999">
                     </div>
                     <div class="form-baths">
                         <label>Baths:</label>
-                            <input type="number" id="baths-min" name="baths-min" placeholder="max" >
-                            <input type="number" id="baths-max" name="baths-max" placeholder="min" >
+                            <input type="number" id="baths-min" name="baths-min" placeholder="min" value="0" >
+                            <input type="number" id="baths-max" name="baths-max" placeholder="max" value="99999999" >
                     </div>
                     <div class="form-property-type">
                         <label>Property Type:</label>
@@ -52,18 +52,18 @@
                             <p>Property Facts:</p>
                             <div class="square-feet">
                                 <label>Sqr Feet</label>
-                                    <input type="numbers" id="square-feet-max" name="square-feet-max" placeholder="max" required>
-                                    <input type="numbers" id="square-feet-min" name="square-feet-min" placeholder="min" required>
+                                    <input type="numbers" id="square-feet-max" name="square-feet-max" placeholder="max" value="99999999">
+                                    <input type="numbers" id="square-feet-min" name="square-feet-min" placeholder="min" value="0">
                             </div>
                             <div class="lot-size">
                                 <label>Lot size</label>
-                                    <input type="numbers" id="lot-size-max" name="lot-size-max" placeholder="max" required>
-                                    <input type="numbers" id="lot-size-min" name="lot-size-min" placeholder="min" required>
+                                    <input type="numbers" id="lot-size-max" name="lot-size-max" placeholder="max" value="99999999" >
+                                    <input type="numbers" id="lot-size-min" name="lot-size-min" placeholder="min" value="0">
                             </div>
                             <div class="year-built">
                                 <label>year built</label>
-                                    <input type="numbers" id="year-built-max" name="year-built-max" placeholder="max" required>
-                                    <input type="numbers" id="year-built-min" name="year-built-min" placeholder="min" required>
+                                    <input type="numbers" id="year-built-max" name="year-built-max" placeholder="max" value="99999999">
+                                    <input type="numbers" id="year-built-min" name="year-built-min" placeholder="min" value="0">
                             </div>     
                         </div>
                     </div>
@@ -77,6 +77,31 @@
         <div class="search-property-list">
             <!-- COMPLETAR -->
             <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                    $price_max=$_POST['price-max'];
+                    $price_min=$_POST['price-min'];
+                    $beds_max=$_POST['beds-max'];
+                    $beds_min=$_POST['beds-min'];
+                    $baths_max=$_POST['baths-max'];
+                    $baths_min=$_POST['baths-min'];
+                    $house_type=$_POST['house_type'];
+                    $flat_type=$_POST['flat_type'];
+                    $townhouse_type=$_POST['townhouse_type'];
+                    $land_type=$_POST['land_type'];
+                    $square_feet_max=$_POST['square-feet-max'];
+                    $square_feet_min=$_POST['square-feet-min'];
+                    $lot_size_max=$_POST['lot-size-max'];
+                    $lot_size_min=$_POST['lot-size-min'];
+                    $year_built_max=$_POST['year-built-max'];
+                    $year_built_min=$_POST['year-built-min'];
+        
+        
+                }else{
+        
+                    header("Location: search.php");
+                }
+
                 try{
                 
                     require_once('includes/functions/db_connection.php');
@@ -91,19 +116,20 @@
                 {
                     echo $e->getMessage();
                 }
-            
-            
+                
+                $Prop= array("Price", "Beds", "Baths", "SqrF", "Baths", "Sqrfeet", "Year","Lotsize");
+
                 while($row = $results->fetch_assoc())
                 {
-                    echo "<h1>" .$row['Price']. "</h1>";
-                    echo "<h1>" .$row['Beds']. "</h1>";
-                    echo "<h1>" .$row['Baths']. "</h1>";
-                    echo "<h1>" .$row['Type']. "</h1>";
-                    echo "<h1>" .$row['Sqrfeet']. "</h1>";
-                    echo "<h1>" .$row['Year']. "</h1>";
-                    echo "<h1>" .$row['Lotsize']. "</h1>";
-                    // echo "<h1>" .$row['Img']. "</h1>";
-
+                    if($price_max > $row['Price'] && $price_min < $row['Price'] 
+                        && $beds_max > $row['Beds'] && $beds_min < $row['Beds']
+                        && $baths_max > $row['Baths'] && $baths_min < $row['Baths']
+                        && $square_feet_max > $row['Sqrfeet'] && $square_feet_min < $row['Sqrfeet']
+                        && $lot_size_max > $row['Lotsize'] && $$lot_size_min < $row['Lotsize']
+                        && $year_built_max > $row['Year'] && $year_built_min < $row['Year'])
+                    {
+                        
+                    }
                 }
             ?>
         </div>
