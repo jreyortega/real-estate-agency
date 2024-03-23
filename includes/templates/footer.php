@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <section class="main-footer-contact-section">
-        <h1>Contact and Navigation</h1>
+        <h1 onclick="toggleList(this)">Contact and Navigation <i class="fas fa-plus"></i><i class="fas fa-minus"></i></h1>
         <ul>
             <li><a>Contact Information</a></li>
             <li><a>Navigation Links</a></li>
@@ -13,7 +13,7 @@
         </ul>
     </section>
     <section class="main-footer-legal-section">
-        <h1>Legal Information</h1>
+        <h1 onclick="toggleList(this)">Legal Information <i class="fas fa-plus"></i><i class="fas fa-minus"></i></h1>
         <ul>
             <li><a>Detailed Privacy Policy</a></li>
             <li><a>Cookie Policy</a></li>
@@ -24,7 +24,7 @@
         </ul>
     </section>
     <section class="main-footer-mobile-section">
-        <h1>Download our app</h1>
+        <h1 onclick="toggleList(this)">Download our app <i class="fas fa-plus"></i><i class="fas fa-minus"></i></h1>
         <ul>
             <li><img src="img/playstore.png"></img></li>
             <li><img src="img/appstore.png"></img></li>

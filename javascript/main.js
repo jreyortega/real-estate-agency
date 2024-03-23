@@ -1,41 +1,54 @@
-// Toggle arrow class and adjust height on click
-let listElement = document.querySelectorAll('.menu-button-click');
+/****************** MENU ******************/
+var menu = document.querySelector('#menu-item');
+var searchHeader = document.querySelector('#search-header');
 
-listElement.forEach(listElement => {
-    listElement.addEventListener('click', () => {
-        listElement.classList.toggle('arrow'); // Al hacer click añade una clase arrow al objeto
+// Search header
+menu.addEventListener('click', function() {
+    console.log('Menu clicked');
+    var nav = document.querySelector('.main-nav');
+    nav.classList.toggle('show');
 
-        let height = 0;
-        let menu = listElement.nextElementSibling; // accedo al elemento adyacente
-        console.log(menu.scrollHeight);
-        // console.log(section.scrollHeight);
-
-        if (menu.clientHeight == "0") {
-            height = menu.scrollHeight;
-        }
-
-        menu.style.height = height + "px";
-    });
+    // Adjust search header margin-top based on nav visibility
+    if (nav.classList.contains('show')) {
+        searchHeader.style.marginTop = '20rem'; // Adjust as needed
+    } else {
+        searchHeader.style.marginTop = '12rem'; // Adjust as needed
+    }
 });
 
-// Adjust height of .main-footer-section on click
-var menuButtons = document.querySelectorAll('.menu-button-click');
+/****************** FOOTER ******************/
 
-menuButtons.forEach(menuButton => {
-    menuButton.addEventListener('click', () => {
-        // Obtener el elemento h1 dentro del menú haciendo clic
-        // var h1Element = menuButton.querySelector('.menu-button-click');
+function toggleList(element) {
+    var ul = element.nextElementSibling;
+    ul.classList.toggle("show");
 
-        // Obtener la altura del elemento h1
-        var h1Height = menuButton.clientHeight;
-        // Obtener el elemento ul hermano del elemento h1
-        var ulElement = menuButton.nextElementSibling;
+    // Toggle "show" class in the parent element
+    var parent = element.parentElement;
+    parent.classList.toggle("show");
 
-        // Ajustar la altura del elemento .main-footer-section
-        var sectionElement = menuButton.parentElement;
-        sectionElement.style.height = h1Height + ulElement.clientHeight + 'px';
-    });
-});
+    var plusIcon = element.querySelector(".fa-plus");
+    var minusIcon = element.querySelector(".fa-minus");
+
+    if (ul.classList.contains("show")) {
+        // Set the max-height of the ul to a large value to allow for transition
+        ul.style.maxHeight = ul.scrollHeight + "px";
+        plusIcon.style.display = "none";
+        minusIcon.style.display = "inline-block";
+    } else {
+        // Set the max-height of the ul to its scroll height to enable smooth transition
+        ul.style.maxHeight = ul.scrollHeight + "px";
+        plusIcon.style.display = "inline-block";
+        minusIcon.style.display = "none";
+        // After a short delay, set the max-height back to 0 for smooth collapse
+        setTimeout(function() {
+            ul.style.maxHeight = "0";
+        }, 50); // Adjust delay as needed
+    }
+}
+
+
+
+/****************** LEAFLET MAP ******************/
 
 // Initialize Leaflet Map
 var map = L.map('main-map').setView([51.505, -0.09], 13.5);

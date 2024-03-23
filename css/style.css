@@ -36,10 +36,9 @@ img {
 .main-header {
     padding-top: 1rem; /* Separation between header and top*/
     padding-bottom: 1rem; /* Separation between header and content */
-    padding-left: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .main-nav {
@@ -47,7 +46,6 @@ img {
     align-items: center;
     margin-bottom: 0;
     list-style-type: none;
-    justify-content: flex-end;
 }
 
 .main-nav li {
@@ -70,34 +68,114 @@ img {
     box-shadow: 0 0 0 0.5rem var(--mycolorblue);
 }
 
+/* Responsive menu */
+
+#menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        position: absolute;
+        left: 0;
+        top: 10rem;
+        backdrop-filter: blur(0.5rem);
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+    
+    .main-nav.show {
+        display: flex;
+        opacity: 1;
+    }
+
+    .main-nav li {
+        margin: 1rem 0;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-header {
+        position: relative;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        color: white;
+        font-size: 2.5rem;
+        line-height: 8rem;
+        float: right;
+        margin-right: 1rem;
+    }
+
+}
+
 .logo {
-    font-family: var(--fontMontserrat);
-    font-size: 3.5rem;
-    color: white;
-    text-transform: uppercase;
     padding-left: 2rem;
 }
 
 .logo img{
-    width: 10rem;
-    height:10rem;
+    width: 7rem;
+    height: 7rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
 /* Search bar header */
-.header-and-search-bar-background h1{
+#search-header {
     font-family: var(--fontMontserrat);
     font-size: 5rem;
     color: white;
     text-align: center;
-    margin-top: 15rem;
+    margin-top: 20rem;
     margin-bottom: 5rem;
+    transition: margin-top 0.5s ease-in-out; /* Add transition */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        padding-left: 1.2rem;
+    }
+
+    .header-and-search-bar-background h1 {
+        font-size: 4rem;
+    }
+
+    #search-header {
+        font-size: 3rem;
+        margin-top: 12rem;
+        margin-bottom: 3rem;
+    }
 }
 
 /* Search bar */
 .search-bar-container{
     width: 100%;
     max-width: 70rem;
-    padding-bottom: 5%;
+    padding-bottom: 9%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,6 +273,33 @@ img {
     width: 2.5rem;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .search-bar-container {
+        max-width: 40rem;
+        padding-bottom: 25%;
+    }
+
+    .search-bar {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .search-bar input {
+        padding: 1.8rem 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .search-bar button {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .search-bar button img {
+        width: 1.8rem;
+        height: auto;
+    }
+}
+
 /* Main content */
 .info-searches, .about-us{
     display:flex;
@@ -263,7 +368,6 @@ img {
         bottom: 10%;
         padding:1rem 1rem 1rem 1rem;
     }
-    
 }
 
 /* 3 main links */
@@ -322,7 +426,7 @@ img {
 
     .about-us h2{
         font-size: 4rem;
-        text-align: left;
+        text-align: center;
         margin-top:6rem;
         margin-right: 4rem;
         margin-left: 4rem;
@@ -337,28 +441,27 @@ img {
     
 }
 
+/********************************* FOOTER *********************************/
 
-
-/* Footer */
 .main-footer {
-    display:flex;
+    display: flex;
     background-color:#006159;
     justify-content:space-between;
-    height: 50rem;
     margin-top: 10rem;
     padding:5rem 15rem 5rem 15rem;
+    height: auto;
 }
-
 
 .main-footer section{
     font-size: 2rem;
     flex:1;
     font-family: var(--fontMontserrat);
     color:white;
-    align-content: center;
+    align-content: top;
 }
 
-.main-footer h1{
+.main-footer section h1{
+    display: flex;
     font-size: 2rem;
     font-family: var(--fontMontserrat);
     color:white;
@@ -366,11 +469,13 @@ img {
     margin-bottom: 0.5rem;
     font-size: 3rem;
     cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main-footer ul{
     list-style-type:none;
-    margin-left:-4rem;
+    margin-left: -3.5rem;
     cursor: pointer;
 }
 
@@ -389,28 +494,36 @@ img {
 }
 
 .main-footer img{
-    max-width:50%;
+    max-width: 50%;
+}
+
+.main-footer section h1 .fas.fa-plus {
+    display: none; /* Hide plus icon by default */
+}
+
+.main-footer section h1 .fas.fa-minus {
+    display: none; /* Hide minus icon by default */
 }
 
 @media (max-width:768px) {
     .main-footer {
         display:flex;
         flex-direction: column;
-        padding-top:2rem;
-        min-height: 100%;
+        padding-top: 2rem;
         padding-left:4rem;
         padding-right: 2rem;
     }
 
-    .main-footer ul {
-        overflow:hidden;
-        margin-top: 1rem;
+    /* Display plus icon */
+    .main-footer section h1 .fas.fa-plus {
+        display: inline-block;
     }
-    .main-footer h1 {
+
+    .main-footer section h1 {
         font-size: 2rem;
         text-align: left;
         cursor:pointer;
-        
+        padding-bottom: 3rem;
     }
     .main-footer li{
         font-size: 1.75rem;
@@ -419,21 +532,32 @@ img {
         margin: 3rem 0 0 2rem;
         height: 0;
     }
-    .menu-button-click img{
-        opacity: 100;
-        position: absolute;
-        transition: transform 0.3s;
-    }
-
-    .arrow img{
-        transform: rotate(90deg);
-    }
 
     .main-footer-mobile-section li{
         margin: 2rem 0 7rem 0;
     }
 
+    .main-footer section h1 .fas.fa-minus {
+        display: none;
+        margin-left: 10px;
+    }
+
+    .main-footer section ul {
+        display: none;
+        overflow: hidden;
+        max-height: 0; /* Add initial max-height */
+        transition: max-height 0.4s ease;
+        margin-top: -4rem;
+    }
+    
+    .main-footer section ul.show {
+        display: block;
+        transition: max-height 0.3s ease; /* Ensure smooth transition on show */
+    }     
+    
 }
+
+/********************************* MAPS *********************************/
 
 .main-map{
     width: 97.5%;

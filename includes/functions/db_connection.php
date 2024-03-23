@@ -1,5 +1,3 @@
-// Purpose: Establishes a connection to the database.
-
 <?php
     // Create a new mysqli object and establish a connection to the database
     $conn = new mysqli('localhost', 'root', '', 'Buildings');
