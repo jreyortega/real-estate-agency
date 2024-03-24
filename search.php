@@ -12,7 +12,8 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap" async defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <?php include_once 'includes/templates/header.php'?>
 <body>
@@ -70,8 +71,8 @@
                 <button type="subit"> Search </button>
             </form>
         </div>
-        <div class="search-map">
-            <!-- COMPLETAR -->
+        <div id="search-map" class="search-map">
+
         </div>
     </div>
     <div class="search-property-list">
@@ -90,7 +91,13 @@
                         newDiv.innerHTML = `
                         
                             <img src = "${value.Img}/1.jpg"/>
-
+                            <div class="price-rooms">
+                                <div class="price">
+                                    <h1>${value.Price}$</h1> <br>
+                                    <h2>${value.Sqrfeet} Sqrt.Ft</h2>
+                                </div>
+                                <div class="rooms"><h2>${value.Beds} - Beds<br>${value.Baths} - Baths</h2></div>
+                            </div>
 
                         `;
                         list.appendChild(newDiv);
@@ -98,7 +105,39 @@
                 }  
 
                 initApp();
+
+                // Initialize Leaflet Map
+                var map = L.map('search-map').setView([51.505, -0.09], 13.5);
+                        
+                // Leaflet Map Layer
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+                
+                arrayProp.forEach(value=>{
+    
+                    var marker = L.marker([value.CoordX,value.CoordY],{
+                        icon: L.icon
+                        ({
+                            iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png', // Default marker icon URL
+                            iconSize: [25, 40] // Adjust size as needed
+                        }) 
+                    });
+
+                    marker.on('mouseover',function(){
+                        var imgHtml = `<img src="${value.Img}/1.jpg" style=" height: 30rem;width: 20rem;">`;
+                        marker.bindPopup(imgHtml).openPopup();
+                    })
+
+                    marker.on('mouseout', function () {
+                        marker.closePopup(); // Oculta el popup al retirar el ratón del marcador
+                    });
+
+                    marker.addTo(map);
+    
+                });
         </script>
     </div>
     <?php include_once 'includes/templates/footer.php'?>
+    <script src="javascript/search.js" charset="utf-8"></script>
 </body>

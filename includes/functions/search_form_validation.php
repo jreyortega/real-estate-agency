@@ -63,22 +63,22 @@
                 
                     $Prop[]=$row;
 
-                    if( $row['Type'] == $house_type )
-                    {
-                        $Prop[]=$row;
-                    }
-                    else if ( $row['Type'] == $flat_type )
-                    {
-                        $Prop[]=$row;
-                    }
-                    else if ( $row['Type'] == $townhouse_type )
-                    {
-                        $Prop[]=$row;
-                    }
-                    else if ( $row['Type'] == $land_type )
-                    {
-                        $Prop[]=$row;
-                    }
+                    // if( $row['Type'] == $house_type )
+                    // {
+                    //     $Prop[]=$row;
+                    // }
+                    // else if ( $row['Type'] == $flat_type )
+                    // {
+                    //     $Prop[]=$row;
+                    // }
+                    // else if ( $row['Type'] == $townhouse_type )
+                    // {
+                    //     $Prop[]=$row;
+                    // }
+                    // else if ( $row['Type'] == $land_type )
+                    // {
+                    //     $Prop[]=$row;
+                    // }
             }
         }
         $conn->close();
