@@ -610,7 +610,7 @@ img {
 
 .search-filters-form{
     margin: 2rem 1rem 1rem 2rem;
-
+    position:relative;
 }
 
 .search-filters-form label{
@@ -665,6 +665,45 @@ img {
     bottom: 0;
     height: 80rem;
     margin: 2rem 2rem 2rem 2rem;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1rem;
+}
+
+.item{
+    height:35rem;
+    border: 0.30rem solid black;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    transition: filter 0.3s;
+}
+
+.item img:hover {
+
+    filter: brightness(50%);
+}
+
+
+.search-filters-form button{
+    position:absolute;
+    background-color: white;
+    font-family: var(--fontMontserrat);
+    padding:1rem 3rem 1rem 3rem;
+    font-size:1.75rem;
+    border: 0.35rem solid var(--mycolorborder);
+    left:65%;
+    top:110%;
+    transition: background-color color 0.3s;
+}
+
+.search-filters-form button:hover{
+
+    background-color: var(--mycolorborder);
+    color:white;
+
 }
 
 /* --------------------------------LOGIN.HTML----------------------------------- */
