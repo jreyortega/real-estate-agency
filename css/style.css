@@ -703,8 +703,8 @@ img {
 
 .marker-popup-img{
     all: unset;
-    width:20rem;
-    height:20rem;
+    width:30rem;
+    height:30rem;
 }
 
 @media (max-width:768px) {
@@ -828,8 +828,9 @@ html, body {
   }
 
 .login-body-img{
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 1rem;
 }
 
 .login-body{
@@ -960,3 +961,7 @@ html, body {
     top:50%;
     transform: translateY(-50%);
 }
+
+
+/* *****************************************************PROPERTYINFO.PHP************************************************************ */
+

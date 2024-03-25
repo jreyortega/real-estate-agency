@@ -18,4 +18,10 @@
 <?php include_once 'includes/templates/header.php'?>
 <body>
     
+    <div class="propertyinfo-img">
+        
+    </div>
+    <div class="propertyinfo-data">
+
+    </div>
 </body>

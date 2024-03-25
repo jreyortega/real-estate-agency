@@ -92,6 +92,7 @@
                         newDiv.innerHTML = `
                         
                             <img src = "${value.Img}/1.jpg"/>
+                            <a href="propertyinfo.php?id=${value.ID}&price=${value.Price}&beds=${value.Beds}&baths=${value.Baths}&type=${value.Type}&sqrfeet=${value.Sqrfeet}&lotsize=${value.Lotsize}&img=${value.Img}&coordX=${value.CoordX}&coordY=${value.CoordY}">
                             <div class="price-rooms">
                                 <div class="price">
                                     <h1>${value.Price}$</h1> <br>
@@ -99,7 +100,7 @@
                                 </div>
                                 <div class="rooms"><h2>${value.Beds} - Beds<br>${value.Baths} - Baths</h2></div>
                             </div>
-
+                            </a>
                         `;
                         list.appendChild(newDiv);
                     })
