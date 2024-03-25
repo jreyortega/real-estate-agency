@@ -18,6 +18,7 @@
 <?php include_once 'includes/templates/header.php'?>
 <body>
     <div class="search-mid-body">
+        <label class="filter-button">Filter</label> 
         <div class="search-filters">
             <form class="search-filters-form" action="./search.php" method="post">
                 <div class="form-price">
@@ -125,7 +126,7 @@
                     });
 
                     marker.on('mouseover',function(){
-                        var imgHtml = `<img src="${value.Img}/1.jpg" style=" height: 30rem;width: 20rem;">`;
+                        var imgHtml = `<img class="marker-popup-img" src="${value.Img}/1.jpg">`;
                         marker.bindPopup(imgHtml).openPopup();
                     })
 
@@ -140,4 +141,6 @@
     </div>
     <?php include_once 'includes/templates/footer.php'?>
     <script src="javascript/search.js" charset="utf-8"></script>
+    <script src="javascript/footer.js" charset="utf-8"></script>
+    <script src="javascript/header.js" charset="utf-8"></script>
 </body>

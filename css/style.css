@@ -601,6 +601,9 @@ img {
     overflow-y: scroll;
 }
 
+.filter-button{
+    display:none;
+}
 
 .search-filters div{
     color:white;
@@ -652,26 +655,79 @@ img {
     margin-left: 0rem;
 }
 
+.search-filters-form button{
+    position:absolute;
+    background-color: white;
+    font-family: var(--fontMontserrat);
+    padding:1rem 3rem 1rem 3rem;
+    font-size:1.75rem;
+    border: 0.35rem solid var(--mycolorborder);
+    left:65%;
+    top:110%;
+    transition: background-color color 0.3s;
+}
+
+.search-filters-form button:hover{
+
+    background-color: var(--mycolorborder);
+    color:white;
+
+}
+
+@media (max-width:768px) {
+
+    .search-filters{
+        display:none;
+    }
+    .filter-button{
+        display:block;
+        margin: 1rem 1rem 0rem 2rem;
+        font-family: var(--fontMontserrat);
+        background-color: #003133;
+        color:white;
+        font-size: 2rem;
+        padding:1rem 1rem 1rem 1rem;
+        border: 0.5rem solid black;
+    }
+
+
+}
+
+
+
 /* search-map */
 .search-map{
     width: 90%;
     margin: 2rem 2rem 1rem 1rem;
 }
 
-.search-map-popup{
+.marker-popup-img{
+    all: unset;
     width:20rem;
     height:20rem;
 }
+
+@media (max-width:768px) {
+
+    .search-map{
+        display:none;
+    }
+
+}
+
+
 
 /* search-property-list */
 .search-property-list{
     background-color: rgb(255, 255, 255);
     bottom: 0;
-    height: 80rem;
+    /* height: 80rem; */
     margin: 2rem 2rem 2rem 2rem;
+    display:inline-block;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:1rem;
+    overflow-y: scroll;
 }
 
 .item{
@@ -723,7 +779,8 @@ img {
 .rooms h2{
     position:absolute;
     bottom:0%;
-    margin: 0 0 1rem 2rem;
+    right:0%;
+    margin: 0 2rem 1rem 2rem;
     font-size: 2.5rem;
 }
 
@@ -745,22 +802,20 @@ img {
     z-index:2;
 } */
 
-.search-filters-form button{
-    position:absolute;
-    background-color: white;
-    font-family: var(--fontMontserrat);
-    padding:1rem 3rem 1rem 3rem;
-    font-size:1.75rem;
-    border: 0.35rem solid var(--mycolorborder);
-    left:65%;
-    top:110%;
-    transition: background-color color 0.3s;
-}
+@media (max-width:768px) {
 
-.search-filters-form button:hover{
+    .search-property-list{
+        grid-template-columns:repeat(1,1fr);
+        gap:1rem;
+        overflow-y: scroll;
+        margin-bottom: 2rem;
+    }
 
-    background-color: var(--mycolorborder);
-    color:white;
+    .item{
+        position:relative;
+        height:20rem;
+        border: 0.30rem solid black;
+    }
 
 }
 

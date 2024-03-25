@@ -1,50 +1,50 @@
 /****************** MENU ******************/
-var menu = document.querySelector('#menu-item');
-var searchHeader = document.querySelector('#search-header');
+// var menu = document.querySelector('#menu-item');
+// var searchHeader = document.querySelector('#search-header');
 
-// Search header
-menu.addEventListener('click', function() {
-    console.log('Menu clicked');
-    var nav = document.querySelector('.main-nav');
-    nav.classList.toggle('show');
+// // Search header
+// menu.addEventListener('click', function() {
+//     console.log('Menu clicked');
+//     var nav = document.querySelector('.main-nav');
+//     nav.classList.toggle('show');
 
-    // Adjust search header margin-top based on nav visibility
-    if (nav.classList.contains('show')) {
-        searchHeader.style.marginTop = '20rem'; // Adjust as needed
-    } else {
-        searchHeader.style.marginTop = '12rem'; // Adjust as needed
-    }
-});
+//     // Adjust search header margin-top based on nav visibility
+//     if (nav.classList.contains('show')) {
+//         searchHeader.style.marginTop = '20rem'; // Adjust as needed
+//     } else {
+//         searchHeader.style.marginTop = '12rem'; // Adjust as needed
+//     }
+// });
 
 /****************** FOOTER ******************/
 
-function toggleList(element) {
-    var ul = element.nextElementSibling;
-    ul.classList.toggle("show");
+// function toggleList(element) {
+//     var ul = element.nextElementSibling;
+//     ul.classList.toggle("show");
 
-    // Toggle "show" class in the parent element
-    var parent = element.parentElement;
-    parent.classList.toggle("show");
+//     // Toggle "show" class in the parent element
+//     var parent = element.parentElement;
+//     parent.classList.toggle("show");
 
-    var plusIcon = element.querySelector(".fa-plus");
-    var minusIcon = element.querySelector(".fa-minus");
+//     var plusIcon = element.querySelector(".fa-plus");
+//     var minusIcon = element.querySelector(".fa-minus");
 
-    if (ul.classList.contains("show")) {
-        // Set the max-height of the ul to a large value to allow for transition
-        ul.style.maxHeight = ul.scrollHeight + "px";
-        plusIcon.style.display = "none";
-        minusIcon.style.display = "inline-block";
-    } else {
-        // Set the max-height of the ul to its scroll height to enable smooth transition
-        ul.style.maxHeight = ul.scrollHeight + "px";
-        plusIcon.style.display = "inline-block";
-        minusIcon.style.display = "none";
-        // After a short delay, set the max-height back to 0 for smooth collapse
-        setTimeout(function() {
-            ul.style.maxHeight = "0";
-        }, 50); // Adjust delay as needed
-    }
-}
+//     if (ul.classList.contains("show")) {
+//         // Set the max-height of the ul to a large value to allow for transition
+//         ul.style.maxHeight = ul.scrollHeight + "px";
+//         plusIcon.style.display = "none";
+//         minusIcon.style.display = "inline-block";
+//     } else {
+//         // Set the max-height of the ul to its scroll height to enable smooth transition
+//         ul.style.maxHeight = ul.scrollHeight + "px";
+//         plusIcon.style.display = "inline-block";
+//         minusIcon.style.display = "none";
+//         // After a short delay, set the max-height back to 0 for smooth collapse
+//         setTimeout(function() {
+//             ul.style.maxHeight = "0";
+//         }, 50); // Adjust delay as needed
+//     }
+// }
 
 
 
