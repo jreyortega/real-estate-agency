@@ -17,11 +17,36 @@
 </head>
 <?php include_once 'includes/templates/header.php'?>
 <body>
-    
-    <div class="propertyinfo-img">
-        
-    </div>
-    <div class="propertyinfo-data">
+    <div class="propertyinfo-mid-body">
+        <div class="propertyinfo-img">
+            <div class="propertyinfo-img-top"></div>
+            <div class="propertyinfo-img-menu">
+                <script>
+                    
+                    var img ="<?php echo $_GET['img']?>"
+                    console.log(img);
+                    var arrayFiles = ["/1.jpg","/2.jpg","/3.jpg","/4.jpg","/5.jpg","/6.jpg","/7.jpg","/8.jpg"];
 
+                    const imgMenu=()=>{
+                        
+                        var list= document.querySelector(".propertyinfo-img-menu");
+
+                        arrayFiles.forEach(file => {
+
+                            let newImg = document.createElement("img");
+                            let imgRute=img + file;
+                            newImg.classList.add("item");
+                            newImg.src=imgRute;
+                            list.appendChild(newImg); 
+                        });
+                    }
+
+                    imgMenu();
+                </script>
+            </div>
+        </div>
+        <div class="propertyinfo-data"></div>
     </div>
 </body>
+<?php include_once 'includes/templates/footer.php'?>
+</html>
