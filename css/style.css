@@ -1052,19 +1052,19 @@ html, body {
     /* background-color: brown; */
     width:100%;
     height:80rem;
-    padding:3rem 3rem 3rem 3rem;
+    padding:0rem 3rem 3rem 3rem;
     
 }
 
 .propertyinfo-data h1{
     font-family: var(--fontMontserrat);
     font-size: 4.5rem;
-    width: 70%;
+    width: 100%;
     border-bottom: 0.5rem solid black;
 }
 
 .propertyinfo-data-body{
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     grid-template-rows: repeat(7, auto); /* Siete filas */
@@ -1084,5 +1084,7 @@ html, body {
 }
 
 .propertyinfo-map{
-    height:50rem;
+    height:26rem;
+    
+
 }
