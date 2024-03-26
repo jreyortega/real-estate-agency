@@ -973,25 +973,116 @@ html, body {
 }
 
 .propertyinfo-img{
-    display:grid;
-    grid-template-rows: 2fr 1fr;
+    display:flex;
+    flex-direction: column;
+    
 }
 
 .propertyinfo-img-top{
-    background-color: #003133;
-    width:100%;
-    height:100%;
+    background-size: cover; /* La imagen de fondo se ajusta al tamaño del contenedor sin repetirse */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen de fondo */
+    height:66.5%;
+    margin-left:2rem;
+    margin-top: 1rem;
+    
+}
+
+.propertyinfo-img-menu-container{
+    display:flex;
+    flex-direction: row;
+    height:33.5%;
+    margin-left:2rem;
+    border:0.5rem solid black;
 }
 
 .propertyinfo-img-menu{
+    display:flex;
+    flex-wrap:nowrap;/* Evita que las imágenes se envuelvan */
     width:100%;
     height:100%;
-    display:grid;
-    grid-template-columns: 1fr;
+    /* scrollbar-width: none; */
+    position:relative;
+    overflow-x:auto;
+}
+
+.propertyinfo-img-menu-container button{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    width: 2.5rem;
+    border: none;
+    border-radius: 0; /* Esquinas rectas */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+.propertyinfo-img-menu-container button:hover {
+    background-color: rgba(0,0,0,1); /* Color de fondo más oscuro al pasar el mouse */
+}
+
+
+.slide-button.left {
+    left: 0; /* Ajusta la posición del botón izquierdo */
+}
+
+.slide-button.right {
+    right: 0; /* Ajusta la posición del botón derecho */
+}
+
+/* .propertyinfo-img-menu::-webkit-scrollbar{
+    display:none;
+} */
+
+.item-img{
+    flex:0 0 auto; /* Evita que las imágenes se hagan flexibles */
+    width:30rem;
+    height:100%;
+    border-right:0.1rem solid white;
+    border-left:0.1rem solid white;
+    object-fit:cover;
+    
 }
 
 .propertyinfo-data{
-    background-color: brown;
+    /* background-color: brown; */
     width:100%;
     height:80rem;
+    padding:3rem 3rem 3rem 3rem;
+    
+}
+
+.propertyinfo-data h1{
+    font-family: var(--fontMontserrat);
+    font-size: 4.5rem;
+    width: 70%;
+    border-bottom: 0.5rem solid black;
+}
+
+.propertyinfo-data-body{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(7, auto); /* Siete filas */
+    
+}
+
+.propertyinfo-data-body h2{
+    font-family: var(--fontMontserrat);
+    font-size: 1.75rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+
+.propertyinfo-data-body h2{
+    border-bottom: 0.1rem solid black;
+}
+
+.propertyinfo-map{
+    height:50rem;
 }
