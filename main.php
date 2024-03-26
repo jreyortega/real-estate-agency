@@ -49,7 +49,7 @@
     </div>
 </body>
 <?php include_once 'includes/templates/footer.php'?>
-<!-- Main JS -->
+<!-- JavaScript -->
 <script src="javascript/main.js" charset="utf-8"></script>
 <script src="javascript/footer.js" charset="utf-8"></script>
 <script src="javascript/header.js" charset="utf-8"></script>

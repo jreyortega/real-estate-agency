@@ -16,63 +16,7 @@
 </head>
 <?php include_once 'includes/templates/header.php'?>
 <body>
-    <div class="search-mid-body">
-        <div class="search-filters">
-            <form class="search-filters-form" action=".search.php" method="post">
-                <div class="form-price">
-                    <label>Price:</label>
-                    <input type="number" id="price-min" name="price-min" placeholder="max" value="0">
-                    <input type="number" id="price-max" name="price-max" placeholder="min" value="9999999999">
-                </div>
-                <div class="form-beds">
-                    <label>Beds:</label>
-                    <input type="number" id="beds-min" name="beds-min" placeholder="min" value="0">
-                    <input type="number" id="beds-max" name="beds-max" placeholder="max" value="9999999">
-                </div>
-                <div class="form-baths">
-                    <label>Baths:</label>
-                    <input type="number" id="baths-min" name="baths-min" placeholder="min" value="0" >
-                    <input type="number" id="baths-max" name="baths-max" placeholder="max" value="99999999" >
-                </div>
-                <div class="form-property-type">
-                    <label>Property Type:</label>
-                    <div class="house-type">
-                        <input class="checkbox-house" id="house-type" name="house-type" type="checkbox">House
-                    </div>
-                    <div class="flat-type">
-                        <input class="checkbox-house" id="flat-type" name="flat-type" type="checkbox">Flat
-                    </div>
-                    <div class="townhouse-type">
-                        <input class="checkbox-house" id="townhouse-type" name="townhouse-type" type="checkbox">Townhouse
-                    </div>
-                    <div class="land-type">
-                        <input class="checkbox-house" id="land-type" name="land-type" type="checkbox">Land
-                    </div>
-                    <div class="form-property-facts">
-                        <p>Property Facts:</p>
-                        <div class="square-feet">
-                            <label>Sqr Feet</label>
-                            <input type="numbers" id="square-feet-max" name="square-feet-max" placeholder="max" value="99999999">
-                            <input type="numbers" id="square-feet-min" name="square-feet-min" placeholder="min" value="0">
-                        </div>
-                        <div class="lot-size">
-                            <label>Lot size</label>
-                            <input type="numbers" id="lot-size-max" name="lot-size-max" placeholder="max" value="99999999" >
-                            <input type="numbers" id="lot-size-min" name="lot-size-min" placeholder="min" value="0">
-                        </div>
-                        <div class="year-built">
-                            <label>year built</label>
-                            <input type="numbers" id="year-built-max" name="year-built-max" placeholder="max" value="99999999">
-                            <input type="numbers" id="year-built-min" name="year-built-min" placeholder="min" value="0">
-                        </div>     
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="search-map">
-            <!-- COMPLETAR -->
-        </div>
-    </div>
+    <?php include_once 'search.php'?>
     <div class="search-property-list">
         <?php include_once 'includes/functions/db_connection.php'?>
         <?php

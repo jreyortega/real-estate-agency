@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap" async defer></script>
+    <script src="https://kit.fontawesome.com/f4ea149574.js" crossorigin="anonymous"></script>
 </head>
 <body class="login-body">
     <img class="login-body-img" src="img/logo.png">
