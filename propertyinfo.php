@@ -106,6 +106,42 @@
             </div>
         </div>       
     </div>
+    <div class="comments-box">
+        <h1>Comments Box</h1><br>
+        </div class="comments">
+        </div>
+        <form class="comments-form" action="./propertyinfo.php" method="post">
+            <div class="form-name">
+                    <label>Introduce your name</label><br>
+                    <input type="text" name="name" id="name">
+            </div>
+            <div class="form-text">
+                    <label>Introduce your comment</label><br>
+                    <input type="text" name="text" id="text">
+            </div>
+            <button type="submit"> Send comment</button>
+        </form>
+        <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $name=$_POST['name'];
+                $text=$_POST['text'];
+            } else {
+                // Redirect to the search page
+                header("Location: propertyinfo.php");
+            }
+            $id=$_GET['id'];
+            try {
+                require_once('includes/functions/db_connection.php');
+                $sql = "INSERT INTO Comments 
+                (ID_property, Name, Text, Date) 
+                VALUES ('$id','$name','$text', CURRENT_TIMESTAMP)";
+            } catch(\Exception $e) {
+                echo $e->getMessage();
+            }
+            
+            $conn->close();
+        ?>
+    </div>
 </body>
 <?php include_once 'includes/templates/footer.php'?>
 </html>

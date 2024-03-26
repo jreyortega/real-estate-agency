@@ -20,7 +20,7 @@
     <div class="search-mid-body">
         <label class="filter-button">Filter</label> 
         <div class="search-filters">
-            <form class="search-filters-form" action="./search.php" method="post">
+            <form class="search-filters-form" action="./search_form_validation.php" method="post">
                 <div class="form-price">
                     <label>Price:</label>
                     <input type="number" id="price-min" name="price-min" placeholder="max" value="0">
