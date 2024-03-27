@@ -33,8 +33,20 @@
             $year_built_max=$_POST['year-built-max'];
             $year_built_min=$_POST['year-built-min'];
         } else {
-            // Redirect to the search page
-            header("Location: search.php");
+            // Load the default values
+            $price_max=10000000;
+            $price_min=0;
+            $beds_max=7;
+            $beds_min=0;
+            $baths_max=7;
+            $baths_min=0;
+            $prop_types=['House', 'Flat', 'Townhouse', 'Land'];
+            $square_feet_max=6000;
+            $square_feet_min=0;
+            $lot_size_max=10000;
+            $lot_size_min=0;
+            $year_built_max=2024;
+            $year_built_min=1900;
         }
 
         // Get the properties from the database
