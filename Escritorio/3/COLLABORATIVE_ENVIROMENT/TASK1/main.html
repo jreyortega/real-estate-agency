@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Estilo letra montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Estilo letra Oswald -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- Enlace a css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- API google maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_DE_API&callback=inicializarMapa" async defer></script>
+    <title>Nombre-página</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="web-name">
+            <h1>WEB NAME</h1>
+        </div>
+        <div class="container">
+            <nav class="main-nav">
+                <a href="">Colgar anuncio</a>
+                <a href="">Comprar</a>
+                <a href="">Log in</a>
+            </nav>
+            <form action="/buscar" method="GET">
+                <input type="text" name="q" placeholder="Localización">
+                <input type="submit">
+            </form>
+        </div>
+    </header>
+
+    <div class="info-busquedas">
+        <div class="Anuncios-recientes">
+            <h2 class="texto-anuncios-recientes">Anuncios recientes</h2>
+            <img> <!--COMPLETAR-->
+        </div>
+        <div class="Ultimas-búsquedas">
+            <h2 class="texto-ultimas-busquedas">Últimas búsquedas</h2>
+            <img>  <!--COMPLETAR-->
+        </div>
+        <div class="Mapa">
+            <h2 class="texto-mapa">Localización</h2>
+            <div id="mapa" style="width: 100%; height: 400px;"></div>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <article>
+            <h2>Sobre nosotros...</h2>
+            <p>...</p>
+        </article>
+        <div class="imagen-about-us">
+            <img><!--COMPLETAR-->
+        </div>   
+    </div>
+
+    <footer class="main-footer">
+        <h3>Política de privacidad</h3>
+        <h3>Aplicación(enlace a google play)</h3>
+        <nav class ='redes-sociales'>
+            <a href=""><!--COMPLETAR--></a>
+            <a href=""><!--COMPLETAR--></a>
+            <a href=""><!--COMPLETAR--></a>
+        </nav>
+
+    </footer>
+
+</body>
+</html>

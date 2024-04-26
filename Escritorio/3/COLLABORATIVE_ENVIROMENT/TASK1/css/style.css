@@ -1,0 +1,84 @@
+:root
+{
+
+    --mycolorblue:#1735e0;
+    --mycolorgreen:#4bb107;
+    --mycolorgrey:#1b1b1b;
+    --fontMontserrat:"Montserrat", sans-serif;
+    --fontOswald:"Oswald", sans-serif;
+}
+
+html
+{
+
+    font-size:62.5%;
+    box-sizing:border-box;
+}
+
+*, *before, *after
+{
+    box-sizing: inherit;
+}
+
+body
+{
+    background-color: #f2f2f2;
+}
+
+img
+{
+    max-width:100%; 
+}
+
+.main-header{
+
+    background-color:var(--mycolorgreen);
+    padding-top:1rem;
+
+}
+
+.web-name h1
+{
+    font-size: 4rem;
+    text-align: center;
+    font-family: var(--fontOswald);
+    
+}
+
+h2
+{
+    font-size: 2rem;
+    font-family:var(--fontMontserrat);
+}
+
+.container{
+
+    background-color: var(--mycolorgrey)
+
+}
+
+.main-nav{
+
+    display: flex;
+    flex-direction:row;
+
+}
+
+.main-nav a{
+
+    margin-right:1rem;
+    font-family:var(--fontMontserrat);
+    color:white;
+    font-size: 1.5rem;
+
+}
+
+.main-nav a:last-child{
+
+    margin-right:0;
+
+}
+form{
+    margin-right: auto;
+}
+
