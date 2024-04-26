@@ -1,0 +1,263 @@
+/*
+Theme Name: VistaPizza
+Theme URI:
+Author: Antonio M. Duran Rosal
+Author URI: www.uloyola.es
+Description: Theme designed to DCE subject
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Videogames, loyola, conference
+Text Domain: loyolagames
+*/
+:root{
+  --mycolorblue: #00B3C2;
+  --mycolorbluedark: #008c99;
+  --mycolorpink: #AF21FF;
+  --mycolorgrey: #353535;
+  --mycolorgreen:#055c05;
+  --mycolorred: #7c0d05;
+  --fontOpenSans: 'Open Sans', sans-serif;
+  --fontPTSans: 'PT Sans', sans-serif;
+  --fontOswald: 'Oswald', sans-serif;
+  --fontPermanentMarker: 'Permanent Marker',  sans-serif;
+}
+
+html {
+  margin: 0!important;
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  background-color: #f2f2f2;
+  font-family: var(--fontOpenSans);
+}
+
+img{
+  max-width:100%;
+}
+
+h1{
+  font-family: var(--fontOswald);
+  text-transform: uppercase;
+  font-size: 10rem;
+  text-align: center;
+  color: var(--mycolorblue);
+}
+
+h2{
+  font-family: var(--fontOswald);
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--mycolorblue);
+}
+
+h3{
+  font-family: var(--fontPTSans);
+  font-size: 3rem;
+  color: var(--mycolorblue);
+}
+
+h1, h2, h3{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+p{
+  font-size: 2rem;
+}
+
+.container{
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width:768px) {
+  .container{
+    width: 90%;
+  }
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+main{
+  margin-top: 4rem!important;
+  margin-bottom: 4rem!important;
+}
+
+/** HEADER ******************************************************************************************/
+  .site-header{
+    background-image: url('./img/fondo-header.jpeg');
+    height:20rem;
+  }
+
+  .header-info{
+    height:10rem;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .header-logo img{
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .header-shopping-cart{
+    display:flex;
+    width: 22rem;;
+    height:5rem;
+    border: 0.5rem solid black;
+    border-radius: 1%;
+    padding-left: 1rem;
+    margin-top:2rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    background-color: var(--mycolorred);
+  }
+
+  .header-logo-name{
+    justify-content: center;
+  }
+  .header-logo-name p{
+    margin-top: 1rem;
+    font-size:8rem;
+    font-family: var(--fontPermanentMarker);
+    text-align: center;
+    color:black;
+  }
+
+  .header-shopping-cart{
+    margin-left: 0;
+  }
+
+  .header-shopping-cart a{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header-shopping-cart p{
+    height: 5rem;
+    padding-top:1rem;
+    padding-right: 2rem;
+    padding-bottom:3rem;
+    margin-top: -0.35rem;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .header-shopping-cart img{
+    height:4.1rem;
+    width: 4.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    
+  }
+
+  .menu-container{
+    display:flex;
+    justify-content: center;
+    height:4.5rem;
+    margin-top: 1.5rem;
+    margin-left:20%;
+    margin-right:20%;
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  .header-menu{
+    display:flex;
+    justify-content: center;
+  }
+
+  .header-menu .menu{
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    
+  } 
+
+  .header-menu .menu li{
+    padding:1rem;
+    padding-right:4rem;
+    font-size: 2rem;
+  }
+
+  .header-menu .menu li a{
+    text-decoration: none;
+    color:#ffffff
+  }
+
+  /**FOOTER******************************************************************************************/
+  
+  .site-footer{
+    height:auto;
+    background-color: var(--mycolorred);
+  }
+
+  .app-links{
+    margin-left:2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-links p{
+    margin-bottom:1rem;
+    color:white;
+  }
+
+  .app-links img{
+    height:7rem;
+    width:25rem;
+    margin-bottom: 1rem;
+  }
+
+  .copyright-container{
+    background-color: var(--mycolorgrey);
+    height: 4rem;
+    text-align:  center;
+    padding-top:0.5rem;
+    color: white;
+  }
+
+  .info-footer{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-menu{
+    margin-left: 10rem;
+    text-decoration: none;
+    color: white;
+    padding-top: 2rem;
+  }
+
+  .footer-menu li{
+    padding-top:1rem;
+  }
+
+  .footer-menu a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+  }
