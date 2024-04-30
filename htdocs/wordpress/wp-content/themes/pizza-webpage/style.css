@@ -1,0 +1,547 @@
+/*
+Theme Name: Pizza Shop
+Theme URI: 
+Author: Jose del Rey, Alvaro Nieva
+Author URI: www.uloyola.es
+Description: A WordPress theme designed for pizza shops.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Pizza, Restaurant, Food, Delivery
+Text Domain: pizzashop
+*/
+
+:root {
+  --mycolorblue: #00B3C2;
+  --mycolorbluedark: #008c99;
+  --mycolorpink: #AF21FF;
+  --mycolorgrey: #353535;
+  --mycolorgreen: #055c05;
+  --mycolorred: #7c0d05;
+  --mycolordarkred: #5a0a03;
+  --mycolordarkdarkred: #3f0602;
+  --fontMontserrat: 'Montserrat', sans-serif;
+  --fontOpenSans: 'Open Sans', sans-serif;
+  --fontPTSans: 'PT Sans', sans-serif;
+  --fontOswald: 'Oswald', sans-serif;
+  --fontPermanentMarker: 'Permanent Marker', sans-serif;
+}
+
+html {
+  margin: 0 !important;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: var(--fontMontserrat);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: var(--fontOswald);
+  text-transform: uppercase;
+  font-size: 10rem;
+  text-align: center;
+  color: var(--mycolordarkred);
+}
+
+h2 {
+  font-family: var(--fontOswald);
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--mycolordarkred);
+}
+
+h3 {
+  font-family: var(--fontPTSans);
+  font-size: 3rem;
+  color: var(--mycolordarkred);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+}
+
+/***************************HEADER***************************/
+.site-header {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75)), url('./img/fondo-header.jpeg');
+  height: 20rem;
+  background-position: center;
+}
+
+.header-info {
+  padding-top: 4rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  margin-left: 20px;
+}
+
+.header-logo img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.header-shopping-cart {
+  display: flex;
+  width: 22rem;
+  height: 5rem;
+  border: 0.5rem solid var(--mycolordarkred);
+  border-radius: 1%;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  background-color: var(--mycolorred);
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.header-shopping-cart:hover {
+  background-color: var(--mycolordarkdarkred);
+}
+
+.header-logo-name {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0;
+}
+
+.header-logo-name p {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-size: 8rem;
+  font-family: var(--fontPermanentMarker);
+  text-align: center;
+  color: black;
+}
+
+.header-shopping-cart {
+  margin-right: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-shopping-cart a {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-shopping-cart p {
+  height: 5rem;
+  font-family: var(--fontMontserrat);
+  font-size: 1.8rem;
+  padding-top: 2.5rem;
+  padding-right: 1rem;
+  margin-top: -0.35rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header-shopping-cart img {
+  height: 4.5rem;
+  width: 3.82rem;
+  padding-top: 2rem;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  height: 4.5rem;
+  width: 100%;
+  margin-top: 5rem;
+  background-color: var(--mycolorred);
+  overflow: hidden;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.header-menu .menu {
+  display: flex;
+  flex-direction: row;
+  height: 10rem;
+  cursor: pointer;
+}
+
+.header-menu .menu:hover {
+  background-color: var(--mycolordarkred);
+}
+
+.header-menu .menu li {
+  padding: 1rem;
+  font-size: 2rem;
+  transition: background-color 0.3s;
+}
+
+.header-menu .menu li:hover {
+  background-color: var(--mycolordarkdarkred);
+}
+
+.header-menu .menu li a {
+  text-decoration: none;
+  color: #ffffff
+}
+
+.store-link {
+  cursor: pointer;
+}
+
+/***************************FOOTER***************************/
+.site-footer {
+  height: auto;
+  background-color: var(--mycolorred);
+}
+
+.app-links {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rem;
+}
+
+.info-footer {
+  height: 10rem;
+}
+
+.app-links p {
+  font-family: var(--fontMontserrat);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  color: white;
+}
+
+.app-links img {
+  height: 5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.footer-logo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo p {
+  position: relative;
+  font-family: var(--fontPermanentMarker);
+  color: #ffffff;
+  font-size: 5rem;
+}
+
+.footer-logo img {
+  margin-top: 2rem;
+  height: 12rem;
+  width: 12rem;
+}
+
+.footer-social-media {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15rem;
+}
+
+.footer-social-media p {
+  color: #ffffff;
+  font-family: var(--fontMontserrat);
+  margin-bottom: 1rem;
+}
+
+.footer-social-media-img img {
+  filter: invert(1);
+  height: 4rem;
+  transition: transform 0.3s;
+}
+
+.footer-social-media-img img:hover {
+  transform: scale(1.3);
+}
+
+.copyright-container {
+  background-color: var(--mycolordarkred);
+  height: 4rem;
+  text-align: center;
+  padding-top: 1rem;
+  color: white;
+  font-family: var(--fontMontserrat);
+  margin-bottom: 0rem;
+}
+
+.info-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 8rem;
+}
+
+.footer-menu-container {
+  text-decoration: none;
+  color: white;
+  padding-top: 2rem;
+}
+
+.footer-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer-menu-container .menu {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20rem;
+  align-items: center;
+}
+
+.footer-menu-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu-container li {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-family: var(--fontMontserrat);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-menu-container a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: font-weight 0.3s;
+}
+
+.footer-menu-container a:hover {
+  font-weight: bold;
+}
+
+/*************************** ABOUT US ***************************/
+.about-us-content h1 {
+  font-family: var(--fontMontserrat);
+  font-size: 7rem;
+  color: var(--mycolorred);
+}
+
+.about-us-content p {
+  text-align: center;
+  font-family: var(--fontMontserrat);
+}
+
+/*************************** LIST PIZZAS ***************************/
+.pizzas {
+  text-align: center;
+}
+
+.list-pizzas {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.card {
+  position: relative;
+  margin-right: 1rem;
+  margin-left: 3.3rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex: 0 0 calc(50% - 25rem);
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.card a {
+  margin-bottom: 3rem;
+}
+
+.card:last-of-type {
+  margin-right: 0;
+}
+
+.card img {
+  display: block;
+  border-radius: 0.5rem;
+  transition: transform .3s ease-in, filter .3s ease-in;
+}
+
+.card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  padding-left: 3rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.card:hover img {
+  filter: none;
+}
+
+.card h3,
+.card p {
+  color: white; /* White text */
+}
+
+.card h3 {
+  margin: 0;
+  font-family: var(--fontOswald);
+}
+
+.card p {
+  margin: 5px 0;
+  font-weight: bold;
+  font-family: var(--fontPTSans);
+}
+
+.card p span {
+  color: black;
+}
+
+.main-content h1 {
+  font-family: var(--fontMontserrat);
+  font-size: 10rem;
+  color: var(--mycolorred);
+  margin-top: 7rem;
+}
+
+
+/*****************************PIZZASMENU-SIDEBAR**************************/
+
+
+
+.sidebar-pizzasmenu{
+  background-color: var(--mycolordarkred);
+  max-height:50rem;
+  width: 30rem;
+  overflow-y: auto;
+  padding-left:3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  border: 0.5rem solid var(--mycolordarkdarkred);
+}
+
+.sidebar-pizzasmenu h3{
+  font-family: var(--fontMontserrat);
+  color:#ffffff;
+}
+
+.sidebar-pizzasmenu p{
+  font-family: var(--fontMontserrat);
+  color:#ffffff;
+}
+
+
+/*PAGE INFOPIZZAS*/
+
+.container-withsidebar-infopizza{
+  width: 170rem;
+}
+
+.main-content-pizzainfo{
+  margin-left: 10rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content-pizzainfo .image-class{
+  height:40rem;
+  width:55rem;
+  border: 1rem solid black;
+}
+
+.infopizza-details{
+  margin-left: 10rem;
+}
+
+.main-content-pizzainfo h1{
+  margin-top: 0rem;
+  font-family: var(--fontMontserrat);
+  font-size: 8rem;
+}
+
+.ingredients-info{
+  border-left:0.3rem solid var(--mycolordarkred);
+}
+
+.ingredients-info li{
+  padding-bottom:1rem;
+  font-size: 2rem;
+  padding-left: 5rem;
+}
+
+.ingredients-info ul{
+  overflow-y: scroll;
+}
+
+.history-ingredients-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 3rem; /* Espacio entre columnas */
+}
